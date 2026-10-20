@@ -11,7 +11,8 @@ bash scripts/setup-cloud.sh
 npm run dev
 ```
 
-The dev server binds to `0.0.0.0:5173`. Forward port 5173 in your cloud IDE.
+The dev server binds to `127.0.0.1:5173`. Forward port 5173 in your cloud IDE.
+This avoids restricted network-interface enumeration in managed containers. If a host requires an external bind, use `npm run dev -- --host 0.0.0.0`.
 For a production preview, run `npm run build` followed by `npm run preview` and forward port 4173.
 
 ## Checks
