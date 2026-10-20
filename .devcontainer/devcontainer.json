@@ -1,0 +1,10 @@
+{
+  "name": "Package software web",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "postCreateCommand": "bash scripts/setup-cloud.sh",
+  "forwardPorts": [5173, 4173],
+  "portsAttributes": {
+    "5173": { "label": "Vite development", "onAutoForward": "notify" },
+    "4173": { "label": "Production preview", "onAutoForward": "silent" }
+  }
+}
